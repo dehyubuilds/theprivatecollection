@@ -3,7 +3,7 @@
     <Container>
       <Heading level="2">How it works</Heading>
       <Text class="SectionHowItWorks__description">
-        Clippy Cloud is just simple, it was built to make everything easy for you.
+        The Private Collection is just simple, it was built to make everything easy for you.
       </Text>
 
       <div class="SectionHowItWorks__cards-container">

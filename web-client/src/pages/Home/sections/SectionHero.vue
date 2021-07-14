@@ -1,7 +1,7 @@
 <template>
   <section class="SectionHero" v-once>
     <Container>
-      <Heading level="1">Clippy Cloud</Heading>
+      <Heading level="1">The Private Collection</Heading>
       <Text class="SectionHero__description">
         Easy way to upload and share files quickly for free and no login required.
       </Text>
