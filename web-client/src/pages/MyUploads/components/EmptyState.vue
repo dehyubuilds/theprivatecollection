@@ -4,8 +4,6 @@
 
     <Button theme="primary" @click="handleNavigate">Upload now</Button>
   </Container>
-
-  <img class="EmptyState__background" src="@/assets/cards-mansory.svg" alt="A grid of cards" />
 </template>
 
 <script lang="ts">
