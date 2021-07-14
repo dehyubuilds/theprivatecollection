@@ -3,38 +3,36 @@
     <Container>
       <div class="SectionHowItWorks__cards-container">
         <CardInfo
-          title="All Files Expire"
+          title="Lorem ipsum "
           :color="makeRgba(EThemeColors.kournikovaRGB, cardOpacity)"
         >
           <template #icon>
             <IconTimer :color="EThemeColors.kournikova" size="54" />
           </template>
 
-          After 30 minutes, all files expire automatically. Then you can no longer access them.
+          Nulla egestas sollicitudin dui, sit amet dictum urna tincidunt et. Suspendisse posuere tristique fringilla. 
         </CardInfo>
 
         <CardInfo
-          title="No Login Required"
+          title="In ornare, eros "
           :color="makeRgba(EThemeColors.geraldineRGB, cardOpacity)"
         >
           <template #icon>
             <IconFast :color="EThemeColors.geraldine" size="54" />
           </template>
 
-          No data from you will be saved. As long as you stay in the same browser, you can see all
-          your uploaded files.
+          Quisque aliquam libero ut leo congue auctor.
         </CardInfo>
 
         <CardInfo
-          title="For Free Forever"
+          title="Donec non augue id dui fermentum finibus"
           :color="makeRgba(EThemeColors.heliotropeRGB, cardOpacity)"
         >
           <template #icon>
             <IconFlower :color="EThemeColors.heliotrope" size="54" />
           </template>
 
-          You will never need to pay for this service. It was created with the intention of
-          simplifying your life.
+          In viverra diam quis lacus varius.
         </CardInfo>
       </div>
     </Container>

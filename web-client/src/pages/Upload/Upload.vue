@@ -3,7 +3,7 @@
 
   <Container class="UploaderContainer">
     <Heading class="UploaderContainer__title" level="1">Upload your files</Heading>
-    <Text>The files should be maximum of {{ maxFileSize }}.</Text>
+    <!-- <Text>The files should be maximum of {{ maxFileSize }}.</Text> -->
 
     <FileUploader class="UploaderContainer__file-uploader" @onDrop="handleDropFiles" />
   </Container>
@@ -28,7 +28,6 @@ import { useDropFiles } from './composables/useDropFiles'
 
 import { Navbar } from '@/components/Navbar'
 import { Heading } from '@/components/Heading'
-import { Text } from '@/components/Text'
 import { Container } from '@/components/Container'
 import { FileUploader } from './components/FileUploader'
 import { UploadCard } from '@/components/Cards/UploadCard'
@@ -39,7 +38,6 @@ export default defineComponent({
     Navbar,
     Container,
     Heading,
-    Text,
     FileUploader,
     UploadCard,
   },
