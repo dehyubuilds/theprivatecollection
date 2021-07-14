@@ -25,7 +25,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 .Heading {
   font-weight: 800;
-  color: var(--concept-text-primary);
+  color: #ffdd72;
 
   &--level-1 {
     font-size: rem(37px);

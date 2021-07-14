@@ -11,26 +11,22 @@
           tristique fringilla.
         </CardInfo>
 
-        <CardInfo
-          title="In ornare, eros "
-          :color="makeRgba(EThemeColors.geraldineRGB, cardOpacity)"
-        >
+        <CardInfo title="Lorem ipsum " :color="makeRgba(EThemeColors.kournikovaRGB, cardOpacity)">
           <template #icon>
-            <IconFast :color="EThemeColors.geraldine" size="54" />
+            <IconTimer :color="EThemeColors.kournikova" size="54" />
           </template>
 
-          Quisque aliquam libero ut leo congue auctor.
+          Nulla egestas sollicitudin dui, sit amet dictum urna tincidunt et. Suspendisse posuere
+          tristique fringilla.
         </CardInfo>
 
-        <CardInfo
-          title="Donec non augue id dui fermentum finibus"
-          :color="makeRgba(EThemeColors.heliotropeRGB, cardOpacity)"
-        >
+        <CardInfo title="Lorem ipsum " :color="makeRgba(EThemeColors.kournikovaRGB, cardOpacity)">
           <template #icon>
-            <IconFlower :color="EThemeColors.heliotrope" size="54" />
+            <IconTimer :color="EThemeColors.kournikova" size="54" />
           </template>
 
-          In viverra diam quis lacus varius.
+          Nulla egestas sollicitudin dui, sit amet dictum urna tincidunt et. Suspendisse posuere
+          tristique fringilla.
         </CardInfo>
       </div>
     </Container>
@@ -42,7 +38,7 @@ import { defineComponent } from 'vue'
 import { EThemeColors, makeRgba } from '@/services/theme'
 import { Container } from '@/components/Container'
 import CardInfo from '@/pages/Home/components/CardInfo.vue'
-import { IconTimer, IconFlower, IconFast } from '@/components/Icons'
+import { IconTimer } from '@/components/Icons'
 
 export default defineComponent({
   name: 'SectionHowItWorks',
@@ -50,8 +46,6 @@ export default defineComponent({
     Container,
     CardInfo,
     IconTimer,
-    IconFlower,
-    IconFast,
   },
   setup() {
     const cardOpacity = 0.25

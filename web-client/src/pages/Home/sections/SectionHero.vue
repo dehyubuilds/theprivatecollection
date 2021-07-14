@@ -45,6 +45,7 @@ export default defineComponent({
 
   &__description {
     margin: rem(24px 0 40px);
+    font-weight: bold;
   }
 
   &__actions {
