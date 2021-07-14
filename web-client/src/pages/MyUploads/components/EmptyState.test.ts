@@ -1,4 +1,4 @@
-import {  render } from '@testing-library/vue'
+import { render } from '@testing-library/vue'
 import EmptyState from './EmptyState.vue'
 
 const mockRoutePush = jest.fn()
@@ -24,12 +24,12 @@ describe('<EmptyState />', () => {
     expect(await findByAltText('A grid of cards')).toBeInTheDocument()
   })
 
-//   it('should redirect to upload page when share button is pressed', async () => {
-//     const { findByText } = renderEmptyState()
+  //   it('should redirect to upload page when share button is pressed', async () => {
+  //     const { findByText } = renderEmptyState()
 
-//     const button = await findByText('Share now')
-//     await fireEvent.click(button)
+  //     const button = await findByText('Share now')
+  //     await fireEvent.click(button)
 
-//     expect(mockRoutePush).toHaveBeenNthCalledWith(1, { name: 'Upload' })
-//   })
+  //     expect(mockRoutePush).toHaveBeenNthCalledWith(1, { name: 'Upload' })
+  //   })
 })

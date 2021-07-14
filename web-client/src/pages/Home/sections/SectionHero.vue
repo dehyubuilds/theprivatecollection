@@ -3,7 +3,7 @@
     <Container>
       <Heading level="1">The Private Collection</Heading>
       <Text class="SectionHero__description">
-        Easy way to upload and share files quickly for free and no login required.
+        Upload and share files quickly and securely.
       </Text>
 
       <div class="SectionHero__actions">
