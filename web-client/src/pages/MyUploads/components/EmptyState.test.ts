@@ -15,7 +15,7 @@ describe('<EmptyState />', () => {
   beforeEach(jest.clearAllMocks)
 
   it('should render correctly', async () => {
-    const { findByRole, findByText} = renderEmptyState()
+    const { findByRole, findByText } = renderEmptyState()
 
     const title = await findByText(`You don't have any files uploaded yet`)
 
