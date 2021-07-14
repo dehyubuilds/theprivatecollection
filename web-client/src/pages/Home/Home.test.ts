@@ -38,10 +38,10 @@ describe('<Home />', () => {
     await findByText('For Free Forever')
   })
 
-  it('should how contact external links', async () => {
-    const { findByText } = render(Home)
+  // it('should how contact external links', async () => {
+  //   const { findByText } = render(Home)
 
-    await findByText('Linkedin')
-    await findByText('GitHub')
-  })
+  //   await findByText('Linkedin')
+  //   await findByText('GitHub')
+  // })
 })
