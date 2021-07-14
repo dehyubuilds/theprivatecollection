@@ -35,6 +35,8 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .CardInfo {
+  margin-top: -200px;
+  margin-bottom: 200px;
   padding: rem(60px 20px);
   display: grid;
   place-content: center;

@@ -1,7 +1,7 @@
 {
   "name": "The Private Collection",
   "short_name": "The Private Collection",
-  "description": "Easy way to upload and share files quickly for free and no login required.",
+  "description": "Upload and share files quickly and securely.",
   "lang": "en",
   "start_url": "/?utm_source=PWA&utm_medium=launcher",
   "background_color": "#181a20",

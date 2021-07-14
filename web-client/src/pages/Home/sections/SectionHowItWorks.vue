@@ -1,11 +1,6 @@
 <template>
   <section class="SectionHowItWorks" v-once>
     <Container>
-      <Heading level="2">How it works</Heading>
-      <Text class="SectionHowItWorks__description">
-        The Private Collection is just simple, it was built to make everything easy for you.
-      </Text>
-
       <div class="SectionHowItWorks__cards-container">
         <CardInfo
           title="All Files Expire"
@@ -49,10 +44,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { EThemeColors, makeRgba } from '@/services/theme'
-
 import { Container } from '@/components/Container'
-import { Heading } from '@/components/Heading'
-import { Text } from '@/components/Text'
 import CardInfo from '@/pages/Home/components/CardInfo.vue'
 import { IconTimer, IconFlower, IconFast } from '@/components/Icons'
 
@@ -60,8 +52,6 @@ export default defineComponent({
   name: 'SectionHowItWorks',
   components: {
     Container,
-    Heading,
-    Text,
     CardInfo,
     IconTimer,
     IconFlower,
