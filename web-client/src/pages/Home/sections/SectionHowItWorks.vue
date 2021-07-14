@@ -2,15 +2,13 @@
   <section class="SectionHowItWorks" v-once>
     <Container>
       <div class="SectionHowItWorks__cards-container">
-        <CardInfo
-          title="Lorem ipsum "
-          :color="makeRgba(EThemeColors.kournikovaRGB, cardOpacity)"
-        >
+        <CardInfo title="Lorem ipsum " :color="makeRgba(EThemeColors.kournikovaRGB, cardOpacity)">
           <template #icon>
             <IconTimer :color="EThemeColors.kournikova" size="54" />
           </template>
 
-          Nulla egestas sollicitudin dui, sit amet dictum urna tincidunt et. Suspendisse posuere tristique fringilla. 
+          Nulla egestas sollicitudin dui, sit amet dictum urna tincidunt et. Suspendisse posuere
+          tristique fringilla.
         </CardInfo>
 
         <CardInfo
