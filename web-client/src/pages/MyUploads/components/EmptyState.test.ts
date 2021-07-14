@@ -1,4 +1,4 @@
-import { fireEvent, render } from '@testing-library/vue'
+import {  render } from '@testing-library/vue'
 import EmptyState from './EmptyState.vue'
 
 const mockRoutePush = jest.fn()
@@ -32,4 +32,4 @@ describe('<EmptyState />', () => {
 
 //     expect(mockRoutePush).toHaveBeenNthCalledWith(1, { name: 'Upload' })
 //   })
-// })
+})
