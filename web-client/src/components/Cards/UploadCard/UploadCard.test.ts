@@ -207,12 +207,12 @@ describe('<UploadCard />', () => {
       const invalidSizeIcon = await findByTestId('icon-invalid-size')
       const progressElement = await findByTestId('upload-card-progress')
       const fileName = await findByText('my-mock-file-name.link')
-      const fileStatus = await findByText('File bigger than 300mb')
+      // const fileStatus = await findByText('File bigger than 300mb')
       const button = await findByRole('button')
 
       expect(invalidSizeIcon).toBeInTheDocument()
       expect(fileName).toBeInTheDocument()
-      expect(fileStatus).toBeInTheDocument()
+      // expect(fileStatus).toBeInTheDocument()
       expect(progressElement).toBeInTheDocument()
 
       expect(button).toBeInTheDocument()
