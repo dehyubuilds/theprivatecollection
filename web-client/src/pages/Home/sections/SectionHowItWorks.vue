@@ -2,7 +2,10 @@
   <section class="SectionHowItWorks" v-once>
     <Container>
       <div class="SectionHowItWorks__cards-container">
-        <CardInfo title="All Files Expire" :color="makeRgba(EThemeColors.kournikovaRGB, cardOpacity)">
+        <CardInfo
+          title="All Files Expire "
+          :color="makeRgba(EThemeColors.kournikovaRGB, cardOpacity)"
+        >
           <template #icon>
             <IconTimer :color="EThemeColors.kournikova" size="54" />
           </template>
@@ -10,20 +13,28 @@
           After 30 minutes, all files expire automatically. Then you can no longer access them.
         </CardInfo>
 
-        <CardInfo title="No Login Required" :color="makeRgba(EThemeColors.kournikovaRGB, cardOpacity)">
+        <CardInfo
+          title="No Login Required "
+          :color="makeRgba(EThemeColors.kournikovaRGB, cardOpacity)"
+        >
           <template #icon>
             <IconTimer :color="EThemeColors.kournikova" size="54" />
           </template>
 
-          No data from you will be saved. As long as you stay in the same browser, you can see all your uploaded files.
+          No data from you will be saved. As long as you stay in the same browser, you can see all
+          your uploaded files.
         </CardInfo>
 
-        <CardInfo title="Share files with a Link " :color="makeRgba(EThemeColors.kournikovaRGB, cardOpacity)">
+        <CardInfo
+          title="Share files with a Link "
+          :color="makeRgba(EThemeColors.kournikovaRGB, cardOpacity)"
+        >
           <template #icon>
             <IconTimer :color="EThemeColors.kournikova" size="54" />
           </template>
 
-          Once a file is uploaded, click the 'Copy Link' button and paste the public URL to share content. 
+          Once a file is uploaded, click the 'Copy Link' button and paste the public URL to share
+          content.
         </CardInfo>
       </div>
     </Container>
