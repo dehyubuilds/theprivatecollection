@@ -7,7 +7,7 @@
           :color="makeRgba(EThemeColors.kournikovaRGB, cardOpacity)"
         >
           <template #icon>
-            <IconTimer :color="EThemeColors.kournikova" size="54" />
+            <IconFast :color="EThemeColors.kournikova" size="54" />
           </template>
 
           After 30 minutes, all files expire automatically. Then you can no longer access them.
@@ -15,10 +15,10 @@
 
         <CardInfo
           title="No Login Required "
-          :color="makeRgba(EThemeColors.kournikovaRGB, cardOpacity)"
+          :color="makeRgba(EThemeColors.geraldineRGB, cardOpacity)"
         >
           <template #icon>
-            <IconTimer :color="EThemeColors.kournikova" size="54" />
+            <IconTimer :color="EThemeColors.geraldine" size="54" />
           </template>
 
           No data from you will be saved. As long as you stay in the same browser, you can see all
@@ -27,10 +27,10 @@
 
         <CardInfo
           title="Share files with a Link "
-          :color="makeRgba(EThemeColors.kournikovaRGB, cardOpacity)"
+          :color="makeRgba(EThemeColors.heliotropeRGB, cardOpacity)"
         >
           <template #icon>
-            <IconTimer :color="EThemeColors.kournikova" size="54" />
+            <IconFlower :color="EThemeColors.heliotrope" size="54" />
           </template>
 
           Once a file is uploaded, click the 'Copy Link' button and paste the public URL to share
@@ -46,7 +46,7 @@ import { defineComponent } from 'vue'
 import { EThemeColors, makeRgba } from '@/services/theme'
 import { Container } from '@/components/Container'
 import CardInfo from '@/pages/Home/components/CardInfo.vue'
-import { IconTimer } from '@/components/Icons'
+import { IconTimer, IconFlower, IconFast } from '@/components/Icons'
 
 export default defineComponent({
   name: 'SectionHowItWorks',
@@ -54,6 +54,8 @@ export default defineComponent({
     Container,
     CardInfo,
     IconTimer,
+    IconFlower,
+    IconFast,
   },
   setup() {
     const cardOpacity = 0.25
