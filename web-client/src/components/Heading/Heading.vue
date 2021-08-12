@@ -37,6 +37,7 @@ export default defineComponent({
 
   &--level-3 {
     font-size: rem(22px);
+    color: white;
   }
 
   @media (min-width: 43.75em) {
@@ -50,6 +51,7 @@ export default defineComponent({
 
     &--level-3 {
       font-size: rem(24px);
+      color: white;
     }
   }
 }
