@@ -21,7 +21,7 @@
             <IconTimer :color="EThemeColors.geraldine" size="54" />
           </template>
 
-          We use your phone number to verify you.
+          We use your phone number to authenticate you.
         </CardInfo>
 
         <CardInfo
