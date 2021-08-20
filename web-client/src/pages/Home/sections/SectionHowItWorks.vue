@@ -3,7 +3,7 @@
     <Container>
       <div class="SectionHowItWorks__cards-container">
         <CardInfo
-          title="Build your collection"
+          title="Build your collections"
           :color="makeRgba(EThemeColors.kournikovaRGB, cardOpacity)"
         >
           <template #icon>
