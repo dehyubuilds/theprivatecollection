@@ -3,14 +3,14 @@
     <Container>
       <div class="SectionHowItWorks__cards-container">
         <CardInfo
-          title="All Files Expire "
+          title="Build your collection"
           :color="makeRgba(EThemeColors.kournikovaRGB, cardOpacity)"
         >
           <template #icon>
             <IconFast :color="EThemeColors.kournikova" size="54" />
           </template>
 
-          After 30 minutes, all files expire automatically. Then you can no longer access them.
+          Upload files from your computer or camera roll.
         </CardInfo>
 
         <CardInfo
