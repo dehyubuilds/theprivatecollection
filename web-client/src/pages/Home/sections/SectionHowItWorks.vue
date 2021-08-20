@@ -14,15 +14,14 @@
         </CardInfo>
 
         <CardInfo
-          title="No Login Required "
+          title="No Username and Password required "
           :color="makeRgba(EThemeColors.geraldineRGB, cardOpacity)"
         >
           <template #icon>
             <IconTimer :color="EThemeColors.geraldine" size="54" />
           </template>
 
-          No data from you will be saved. As long as you stay in the same browser, you can see all
-          your uploaded files.
+          We use your phone number to verify you.
         </CardInfo>
 
         <CardInfo
