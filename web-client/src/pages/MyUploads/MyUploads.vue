@@ -12,7 +12,7 @@
 
       <Container class="MyUploads__tabs-container">
         <Heading class="MyUploads__tabs-title" level="3"
-          >Copy and paste link to share a file</Heading
+          >Copy and paste link to share a file.</Heading
         >
         <TabContext :activeTab="activeTab">
           <TabList @onTabChange="setActiveTab">
