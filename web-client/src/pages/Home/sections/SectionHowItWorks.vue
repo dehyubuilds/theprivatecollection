@@ -14,7 +14,7 @@
         </CardInfo>
 
         <CardInfo
-          title="No Username and Password required "
+          title="No Login required "
           :color="makeRgba(EThemeColors.geraldineRGB, cardOpacity)"
         >
           <template #icon>
