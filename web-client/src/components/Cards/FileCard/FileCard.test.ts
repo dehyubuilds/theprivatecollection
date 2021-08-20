@@ -37,11 +37,9 @@ describe('<FileCard />', () => {
 
     const fileName = await findByText('Fake-File-Name.pdf')
     const fileSize = await findByText('81 MB')
-    const timeToExpire = await findByText('30 minutes to expire')
-
+ 
     expect(fileSize).toBeInTheDocument()
     expect(fileName).toBeInTheDocument()
-    expect(timeToExpire).toBeInTheDocument()
     expect(await findByTestId('head')).toBeInTheDocument()
     expect(await findByRole('button')).toBeInTheDocument()
   })
