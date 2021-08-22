@@ -11,7 +11,7 @@
       </Container>
 
       <Container class="MyUploads__tabs-container">
-        <Heading class="MyUploads__tabs-title" level="3">Choose file status</Heading>
+        <Heading class="MyUploads__tabs-title" level="3">Select File Category</Heading>
 
         <TabContext :activeTab="activeTab">
           <TabList @onTabChange="setActiveTab">
@@ -24,7 +24,7 @@
           </TabLayout>
 
           <TabLayout class="MyUploads__tabs-grid" :name="TabNames.Images">
-            <FileCard v-for="file in ImagesFiles" :key="file.id" :file="file" isImages />
+            <FileCard v-for="file in ImageFiles" :key="file.id" :file="file" />
           </TabLayout>
         </TabContext>
       </Container>
@@ -61,13 +61,16 @@ export default defineComponent({
     const { enableAppScroll, disableAppScroll } = useAppScroll()
     const { storedFiles } = useFile()
     const VideosFiles = computed(() => storedFiles.value.filter((file) => file))
+    const ImageFiles = computed(() => storedFiles.value.filter((file) => file))
     const totalVideos = computed(() => VideosFiles.value.length)
+    const totalImages = computed(() => VideosFiles.value.length)
     const hasUploadedFiles = computed(() => Boolean(storedFiles.value.length))
     const handleNoFiles = () => {
       window.scrollTo({ top: 0 })
       disableAppScroll()
     }
     const TabNames = readonly({ Videos: 'Videos', Images: 'Images' })
+    debugger
     const initialTab = () => {
       const hasVideos = totalVideos.value > 0
       return hasVideos ? TabNames.Videos : TabNames.Images
@@ -80,7 +83,9 @@ export default defineComponent({
     onUnmounted(() => enableAppScroll())
     return {
       VideosFiles,
+      ImageFiles,
       totalVideos,
+      totalImages,
       hasUploadedFiles,
       TabNames,
       activeTab,
