@@ -6,6 +6,21 @@ import type { CustomFile } from './types'
 import { generateUniqueId } from '@/utilities/generators'
 import { getFileExtension } from '@/utilities/strings'
 
+const ImageFiles = ['.jpg', '.jpeg', '.png']
+const VideoFiles = ['.mp4', '.mov']
+
+export function isImage(fileName: string) {
+  const fileExtension: string = fileName.split('.').pop() as string
+  if (ImageFiles.includes('.' + fileExtension)) {
+    return true
+  }
+}
+export function isVideo(fileName: string) {
+  const fileExtension: string = fileName.split('.').pop() as string
+  if (VideoFiles.includes('.' + fileExtension)) {
+    return true
+  }
+}
 export function getTimeToExpireFile(fileCreationDate: string) {
   const creationDate = new Date(fileCreationDate)
   const expireDate = addMinutes(creationDate, 30)

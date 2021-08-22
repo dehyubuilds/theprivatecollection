@@ -34,6 +34,8 @@
 
 <script lang="ts">
 import { defineComponent, readonly, onUnmounted, watchEffect, computed } from 'vue'
+import { isImage } from '@/modules/file'
+import { isVideo } from '@/modules/file'
 import { useAppScroll } from '@/hooks/app-scroll'
 import { useFile } from '@/contexts/file'
 import EmptyState from './components/EmptyState.vue'
@@ -60,17 +62,17 @@ export default defineComponent({
   setup() {
     const { enableAppScroll, disableAppScroll } = useAppScroll()
     const { storedFiles } = useFile()
-    const VideosFiles = computed(() => storedFiles.value.filter((file) => file))
-    const ImageFiles = computed(() => storedFiles.value.filter((file) => file))
+    const VideosFiles = computed(() => storedFiles.value.filter((file) => isVideo(file.name)))
+    // const ImageFiles = computed(() => storedFiles.value.filter((file) => file))
+    const ImageFiles = computed(() => storedFiles.value.filter((file) => isImage(file.name)))
     const totalVideos = computed(() => VideosFiles.value.length)
-    const totalImages = computed(() => VideosFiles.value.length)
+    const totalImages = computed(() => ImageFiles.value.length)
     const hasUploadedFiles = computed(() => Boolean(storedFiles.value.length))
     const handleNoFiles = () => {
       window.scrollTo({ top: 0 })
       disableAppScroll()
     }
     const TabNames = readonly({ Videos: 'Videos', Images: 'Images' })
-    debugger
     const initialTab = () => {
       const hasVideos = totalVideos.value > 0
       return hasVideos ? TabNames.Videos : TabNames.Images
