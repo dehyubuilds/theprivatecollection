@@ -7,24 +7,24 @@
     <template v-else>
       <Container class="MyUploads__container">
         <Heading class="MyUploads__title" level="1">Your uploads</Heading>
-        <Text>Here you can see all your uploaded files.</Text>
+        <Text>Here you can see all your uploaded files, Images or not.</Text>
       </Container>
 
       <Container class="MyUploads__tabs-container">
-        <Heading class="MyUploads__tabs-title" level="3"
-          >Copy and paste link to share a file.</Heading
-        >
+        <Heading class="MyUploads__tabs-title" level="3">Choose file status</Heading>
+
         <TabContext :activeTab="activeTab">
           <TabList @onTabChange="setActiveTab">
-            <Tab
-              :name="TabNames.Available"
-              :total="totalAvailable"
-              :disabled="totalAvailable === 0"
-            />
+            <Tab :name="TabNames.Videos" :total="totalVideos" :disabled="totalVideos === 0" />
+            <Tab :name="TabNames.Images" :total="totalImages" :disabled="totalImages === 0" />
           </TabList>
 
-          <TabLayout class="MyUploads__tabs-grid" :name="TabNames.Available">
-            <FileCard v-for="file in availableFiles" :key="file.id" :file="file" />
+          <TabLayout class="MyUploads__tabs-grid" :name="TabNames.Videos">
+            <FileCard v-for="file in VideosFiles" :key="file.id" :file="file" />
+          </TabLayout>
+
+          <TabLayout class="MyUploads__tabs-grid" :name="TabNames.Images">
+            <FileCard v-for="file in ImagesFiles" :key="file.id" :file="file" isImages />
           </TabLayout>
         </TabContext>
       </Container>
@@ -60,17 +60,17 @@ export default defineComponent({
   setup() {
     const { enableAppScroll, disableAppScroll } = useAppScroll()
     const { storedFiles } = useFile()
-    const availableFiles = computed(() => storedFiles.value.filter((file) => file))
-    const totalAvailable = computed(() => availableFiles.value.length)
+    const VideosFiles = computed(() => storedFiles.value.filter((file) => file))
+    const totalVideos = computed(() => VideosFiles.value.length)
     const hasUploadedFiles = computed(() => Boolean(storedFiles.value.length))
     const handleNoFiles = () => {
       window.scrollTo({ top: 0 })
       disableAppScroll()
     }
-    const TabNames = readonly({ Available: 'Files Available' })
+    const TabNames = readonly({ Videos: 'Videos', Images: 'Images' })
     const initialTab = () => {
-      const hasAvailable = totalAvailable.value > 0
-      return hasAvailable ? TabNames.Available : TabNames.Available
+      const hasVideos = totalVideos.value > 0
+      return hasVideos ? TabNames.Videos : TabNames.Images
     }
     const { activeTab, setActiveTab } = useTabs(initialTab())
     watchEffect(() => {
@@ -79,8 +79,8 @@ export default defineComponent({
     })
     onUnmounted(() => enableAppScroll())
     return {
-      availableFiles,
-      totalAvailable,
+      VideosFiles,
+      totalVideos,
       hasUploadedFiles,
       TabNames,
       activeTab,

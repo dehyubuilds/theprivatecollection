@@ -30,6 +30,7 @@ export default defineComponent({
   components: { BaseCard, FileCardHead, ButtonCopy },
   setup(props) {
     const { isExpired } = toRefs(props)
+    console.log('Props ' + props.file)
     const { extension, size } = toRefs(props.file)
     const formattedSize = computed(() => getReadableSize(size.value))
 
