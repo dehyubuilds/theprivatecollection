@@ -6,8 +6,8 @@ import type { CustomFile } from './types'
 import { generateUniqueId } from '@/utilities/generators'
 import { getFileExtension } from '@/utilities/strings'
 
-const ImageFiles = ['.jpg', '.jpeg', '.png','.JPG', '.JPEG', '.PNG']
-const VideoFiles = ['.mp4', '.mov', '.MP4', '.MOV']
+const ImageFiles = ['.jpg', '.jpeg', '.png', '.JPG', '.JPEG', '.PNG' ]
+const VideoFiles = ['.mp4', '.mov', '.MP4', '.MOV' ]
 
 export function isImage(fileName: string) {
   const fileExtension: string = fileName.split('.').pop() as string
