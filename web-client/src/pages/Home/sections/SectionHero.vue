@@ -2,7 +2,7 @@
   <section class="SectionHero" v-once>
     <Container>
       <Heading level="1">The Private Collection</Heading>
-      <Text class="SectionHero__description"> Not your average file storage. </Text>
+      <Text class="SectionHero__description"> Sell Premium Adult Content. </Text>
 
       <div class="SectionHero__actions">
         <Button theme="primary" data-testid="primary-button" @click="navigateToUpload">

@@ -7,7 +7,7 @@
     <template v-else>
       <Container class="MyUploads__container">
         <Heading class="MyUploads__title" level="1">Your uploads</Heading>
-        <Text>Here you can see all your uploaded files, Images or not.</Text>
+        <Text>Here you can see all your uploaded files.</Text>
       </Container>
 
       <Container class="MyUploads__tabs-container">
