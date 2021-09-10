@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "theprivatecollectionf4e4fb51": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

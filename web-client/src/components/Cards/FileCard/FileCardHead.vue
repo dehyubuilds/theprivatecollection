@@ -1,7 +1,10 @@
 <template>
   <div class="FileCardHead" :style="backgroundColor">
-    <IconFile :color="iconColor" size="124" data-testid="icon" />
-    <h5>{{ fileExtension }}</h5>
+    <!-- <IconFile :color="iconColor" size="124" data-testid="icon" /> -->
+    <!-- <h5>{{ fileExtension }}</h5> -->
+    <!-- <img v-bind:src="image" /> -->
+    <h5>Heading</h5>
+    <img v-bind:src="image" />
   </div>
 </template>
 
@@ -9,14 +12,15 @@
 import { defineComponent, inject, Ref } from 'vue'
 import { useHeadColors } from './colorHelpers'
 
-import { IconFile } from '@/components/Icons'
+// import { IconFile } from '@/components/Icons'
 
 export default defineComponent({
   name: 'FileCardHead',
-  components: { IconFile },
+  // components: { IconFile },
   setup() {
     const fileExtension = inject('fileExtension') as Ref<string>
     const isExpired = inject('isExpired') as Ref<boolean>
+    const image = '../FileCardAsset/demontime.jpg'
 
     const { icon, background } = useHeadColors(() => isExpired.value)
 
@@ -24,6 +28,7 @@ export default defineComponent({
       fileExtension,
       iconColor: icon,
       backgroundColor: background,
+      image,
     }
   },
 })

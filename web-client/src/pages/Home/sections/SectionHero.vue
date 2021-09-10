@@ -2,7 +2,7 @@
   <section class="SectionHero" v-once>
     <Container>
       <Heading level="1">The Private Collection</Heading>
-      <Text class="SectionHero__description"> Content Sharing made easy. </Text>
+      <Text class="SectionHero__description"> All Original Content. </Text>
 
       <div class="SectionHero__actions">
         <Button theme="primary" data-testid="primary-button" @click="navigateToUpload">

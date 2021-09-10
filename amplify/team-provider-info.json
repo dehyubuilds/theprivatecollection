@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-theprivatecollection-dev-201010-authRole",
+      "UnauthRoleArn": "arn:aws:iam::245846168626:role/amplify-theprivatecollection-dev-201010-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::245846168626:role/amplify-theprivatecollection-dev-201010-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-theprivatecollection-dev-201010-deployment",
+      "UnauthRoleName": "amplify-theprivatecollection-dev-201010-unauthRole",
+      "StackName": "amplify-theprivatecollection-dev-201010",
+      "StackId": "arn:aws:cloudformation:us-east-1:245846168626:stack/amplify-theprivatecollection-dev-201010/a123bdc0-0876-11ec-96ce-0e03ee49136b",
+      "AmplifyAppId": "durmnpe39ngv2"
+    },
+    "categories": {
+      "auth": {
+        "theprivatecollectionf4e4fb51": {}
+      }
+    }
+  }
+}
